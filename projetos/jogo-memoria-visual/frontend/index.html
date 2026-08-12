@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jogo de memória visual">
+  <title>Memorize! — Jogo de Memória Visual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="panel" id="home-screen">
+      <p class="eyebrow">JOGO DE MEMÓRIA VISUAL</p>
+      <h1>🧠 Memorize!</h1>
+      <p class="subtitle">Observe, memorize e encontre cada elemento na posição correta.</p>
+
+      <div class="settings">
+        <h2>Tempo de memorização</h2>
+        <div class="time-options" role="group" aria-label="Tempo de memorização">
+          <button class="time-option active" data-minutes="1">1 min</button>
+          <button class="time-option" data-minutes="3">3 min</button>
+          <button class="time-option" data-minutes="5">5 min</button>
+        </div>
+      </div>
+
+      <button class="primary-button" id="start-button">Começar partida</button>
+      <p class="hint">Modo demonstração: o cronômetro pode ser acelerado no código.</p>
+    </section>
+
+    <section class="panel game-screen hidden" id="game-screen">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow" id="phase-label">MEMORIZE</p>
+          <h1 id="game-title">Memorize as posições</h1>
+        </div>
+        <div class="timer" id="timer" aria-live="polite">01:00</div>
+      </header>
+
+      <div class="target hidden" id="target-area" aria-live="polite">
+        <span>Onde estava?</span>
+        <strong id="target-item">🐶</strong>
+      </div>
+
+      <div class="board" id="board" aria-label="Tabuleiro do jogo"></div>
+      <p class="feedback" id="feedback" aria-live="polite"></p>
+    </section>
+
+    <section class="panel hidden" id="result-screen">
+      <p class="eyebrow">PARTIDA FINALIZADA</p>
+      <h1>Resultado 🎉</h1>
+      <div class="score-card">
+        <div><span>Acertos</span><strong id="correct-score">0</strong></div>
+        <div><span>Erros</span><strong id="wrong-score">0</strong></div>
+        <div><span>Pontuação</span><strong id="total-score">0</strong></div>
+      </div>
+      <button class="primary-button" id="restart-button">Jogar novamente</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
