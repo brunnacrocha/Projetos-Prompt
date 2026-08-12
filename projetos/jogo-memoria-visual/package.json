@@ -1,0 +1,12 @@
+{
+  "name": "jogo-memoria-visual",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --root frontend"
+  },
+  "devDependencies": {
+    "vite": "^7.1.2"
+  }
+}
